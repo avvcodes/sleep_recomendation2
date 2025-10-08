@@ -148,7 +148,7 @@ def load_global_model(input_shape):
         model = build_lstm_model(input_shape)
         if model is None:
             return None
-        model_path = 'models/global_model.weights.h5'
+        model_path = 'global_model.weights.h5'
         if os.path.exists(model_path):
             model.load_weights(model_path)
             st.info("Loaded global model")
